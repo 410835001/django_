@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>會員登入</h2>
+            <p>
+            {% if request.user.is_authenticated %}
+                {{ request.user }} 您已經登入囉~
+                <a href="/logout/">登出</a>
+                <a href="/home/">回到首頁</a>
+            </p>
+            {% else %}
+            <p>您尚未登入喔~<a href="/login/">登入</a></p>
+            {% endif %}
+    </body>
+</html>
+
+{% endblock  %}

@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>顧客會員系統</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" charset="UTF-8">
+</head>
+<body>
+    <marquee><p>本系統是由國立東華大學 資訊管理學系 第23屆 畢業專題第三組開發</p></marquee>
+
+    {% include 'navbar.html' %}
+
+    <div class="maininfo">
+    {% block content %}
+        replace
+    {% endblock %}
+    </div>
+
+    <div class="bottominfo">
+        <p>聯絡資訊</p>
+        <p>電話：0918286491</p>
+        <p>電子信箱：410835042@gms.ndhu.edu.tw</p>
+    </div>
+    </body>
+</html>

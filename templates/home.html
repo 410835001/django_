@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<div class="pagesize">
+   {% for product in products %}
+    <div class ="size">
+    <a href ="/detail/{{ product.id }}"><img src="/static/{{ product.goods_img }}"></a>
+    <p class="psize"> {{ product.goods_name }} </p>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+{% endblock %}

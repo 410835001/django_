@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>商品資訊</title>
+    </head>
+
+        <img src="/static/{{ goods.goods_img }}">
+        {{ goods.goods_name }}
+        {{ goods.goods_price }}
+        <br>
+            <form class=”Inputs” method="POST">
+            {% csrf_token %}
+            {% if request.user.is_authenticated %}
+            <button type="submit"><a href =" ">模擬配戴</a></button>
+            <button type="submit"><a href ="/material/">加入收藏</a></button>
+            <button type="submit"><a href ="">加入購物車</a></button>
+            {% else %}
+            <div class="state">
+                <p class="state-p">您還尚未登入會員哦</p>
+            {% endif %}
+            </div>
+            </form>
+
+</html>
+ {% endblock %}

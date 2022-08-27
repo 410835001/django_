@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- userinfo.html (ch10www project) -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>會員資料<</title>
+</head>
+<body>
+    <h1>會員資料</h1>
+     <form class=”Inputs” method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <br>
+        <input type="submit" value="修改"><button type="submit"><a href ="/listall/">返回</a></button>
+    </form>
+</body>
+</html>
+{% endblock %}

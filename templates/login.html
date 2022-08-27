@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>登入</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            <h1>登入</h1>
+            {% csrf_token %}
+                {{ form.as_p }}
+            <input class="btn btn-primary" type="submit" value="登入" />
+            <p>還沒有帳號嗎? <a href="../contact">註冊</a></p>
+            </form>
+        </form>
+    </body>
+</html>
+{% endblock %}

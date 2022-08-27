@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加入我們</title>
+
+    <h1>加入我們成為夥伴!</h1>
+    <h3>歡迎來到夥伴頁面</h3>
+    {% if request.user.is_authenticated %}
+    <p>{{ request.user }} 您好</p>
+    <button type="submit"><a href ="/logout/">登出</a></button>
+    {% else %}
+    <p>您尚未登入 登入後即可使用夥伴功能</p>
+    <button type="submit"><a href ="/login/">登入</a></button><button type="submit"><a href ="/contact/">註冊</a></button>
+    {% endif %}
+</head>
+<body>
+
+</body>
+</html>
+
+{% endblock %}

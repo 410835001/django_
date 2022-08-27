@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+是否確定刪除{{ object.title }}?
+    <br />
+    <br />
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="" />
+        <a class="btn btn-warning" href="{% url 'todo:list' %}">取消</a>
+    </form>
+{% endblock %}

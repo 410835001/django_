@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>商品資訊</title>
+    </head>
+    <body>
+        <div class="pagesize">
+        {% for product in products %}
+        <div class ="size">
+        <img src="{{ product.goods_img }}">
+        {{ product.goods_name }}
+        {{ product.goods_price }}
+        {{ product.goods_desc }}
+        </div>
+        {% endfor %}
+        {% if request.user.is_authenticated %}
+        <button type="submit"><a href =" ">模擬配戴</a></button><button type="submit"><a href ="/collect/">加入收藏</a></button><button type="submit"><a href ="">加入購物車</a></button>
+        {% else %}
+        <div class="state">
+            <p class="state-p">您還尚未登入會員哦</p>
+        {% endif %}
+        </div>
+    </div>
+
+    </body>
+
+</html>
+ {% endblock %}
